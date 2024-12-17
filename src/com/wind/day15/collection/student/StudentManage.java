@@ -73,13 +73,13 @@ public class StudentManage implements ManageInterface {
 		
 		return sList;
 	}
-	public String searchFailResult(Student student) {
-		if( student != null) {
+	public String searchFailResult(Student student) { // 이름으로 찾은 학생 정보 넘어옴
+		if( student != null) { // 정보가 있을 때 동작
 			int firstScore,secondScore;
 			firstScore = student.getFirstScore();
-			secondScore = student.getSecondScore();
-			double avg = (firstScore + secondScore)/2.0;
-			StringBuffer sb = new StringBuffer();
+			secondScore = student.getSecondScore(); // 1차, 2차 점수 설정
+			double avg = (firstScore + secondScore)/2.0; // 평균구하기
+			StringBuffer sb = new StringBuffer(); // 결과값(String) 담을 객체
 		if(avg >= 60) {
 			if(firstScore < 40) {
 				sb.append("1차 시험 재평가\n");
@@ -88,13 +88,13 @@ public class StudentManage implements ManageInterface {
 				sb.append("2차 시험 재평가");
 			}else
 				sb.append("모두 통과");
-		}
+		}									// 여기에서는 3가지 결과 중 1개만 담김
 		else {
 		if(firstScore < 60) {
-				sb.append("1차 시험 재평가\n");
+				sb.append("1차 시험 재평가\n"); // 개행해서 출력되도록 역슬래쉬엔을 붙여줌
 		}if(secondScore < 60) {
 				sb.append("2차 시험 재평가");
-			}
+			}								// 여기에서는 2가지 결과가 담길 수 있음.
 		}
 		return sb.toString();
 	}
