@@ -48,6 +48,21 @@ public class BatteryView {
 		System.out.println("대여일자와 시간을 입력해주세요. ex) 2024-12-18  18:00");
 		return sc.next();
 	}
-
+	public String inputReturnDate() {
+		System.out.println("반납일자와 시간을 입력해주세요. ex) 2024-12-20 10:00");
+		return sc.next();
+	}
+	public String inputNumber() {
+		System.out.println(" 핸드폰번호를 입력해주세요 : ");
+		return sc.next();
+	}
+	public void showReservation(String reservation) {
+		if (reservation != null) {
+			System.out.println("예약 정보 : " + reservation);
+			System.out.println("예약이 확인되었습니다.");
+		}else {
+			System.out.println("예약자 정보를 찾을 수 없습니다.");
+		}
+	}
 	
 }
