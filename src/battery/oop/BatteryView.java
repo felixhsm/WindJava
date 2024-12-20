@@ -64,5 +64,20 @@ public class BatteryView {
 			System.out.println("예약자 정보를 찾을 수 없습니다.");
 		}
 	}
+
+	public void showStock() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public String inputReservationPhoneNumber() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void showReturnSuccess() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
